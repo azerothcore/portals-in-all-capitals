@@ -1,6 +1,6 @@
 -- !!! NOTE: set these before running the queries in order to avoid conflicts !!!
-SET @GO_TEMPLATE = 500000; -- 7 slots
-SET @GO_SPAWN = 2000000; -- 24 slots
+SET @GO_TEMPLATE = 500000; -- 8 slots
+SET @GO_SPAWN = 2000000; -- 24 slots (3 x 8)
 
 DELETE FROM `gameobject_template` WHERE `entry` IN (
     @GO_TEMPLATE + 0,
