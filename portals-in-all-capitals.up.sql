@@ -31,7 +31,7 @@ INSERT INTO `gameobject_template_locale` (`entry`, `locale`, `name`, `castBarCap
 (@GO_TEMPLATE + 3, 'esES', 'Portal a Forjaz', '', 0),
 (@GO_TEMPLATE + 4, 'esES', 'Portal a Orgrimmar', '', 0),
 (@GO_TEMPLATE + 5, 'esES', 'Portal a Lunargenta', '', 0),
-(@GO_TEMPLATE + 6, 'esES', 'Portal Cima del Trueno', '', 0),
+(@GO_TEMPLATE + 6, 'esES', 'Portal a Cima del Trueno', '', 0),
 (@GO_TEMPLATE + 7, 'esES', 'Portal a Entrañas', '', 0),
 (@GO_TEMPLATE + 0, 'esMX', 'Portal a Ventormenta', '', 0),
 (@GO_TEMPLATE + 1, 'esMX', 'Portal a Darnassus', '', 0),
@@ -39,7 +39,7 @@ INSERT INTO `gameobject_template_locale` (`entry`, `locale`, `name`, `castBarCap
 (@GO_TEMPLATE + 3, 'esMX', 'Portal a Forjaz', '', 0),
 (@GO_TEMPLATE + 4, 'esMX', 'Portal a Orgrimmar', '', 0),
 (@GO_TEMPLATE + 5, 'esMX', 'Portal a Lunargenta', '', 0),
-(@GO_TEMPLATE + 6, 'esMX', 'Portal Cima del Trueno', '', 0),
+(@GO_TEMPLATE + 6, 'esMX', 'Portal a Cima del Trueno', '', 0),
 (@GO_TEMPLATE + 7, 'esMX', 'Portal a Entrañas', '', 0);
 
 DELETE FROM `gameobject_template_addon` WHERE `entry` IN (
