@@ -22,6 +22,26 @@ INSERT INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `IconNa
 (@GO_TEMPLATE + 6, 22, 4397, 'Portal to Thunder Bluff', '', '', '', 1, 17610, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', '', 0),
 (@GO_TEMPLATE + 7, 22, 4398, 'Portal to Undercity', '', '', '', 1, 17611, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', '', 0);
 
+DELETE FROM `gameobject_template_locale` WHERE `entry` BETWEEN @GO_TEMPLATE + 0 AND @GO_TEMPLATE + 7 AND `locale` IN ('esES', 'esMX');
+
+INSERT INTO `gameobject_template_locale` (`entry`, `locale`, `name`, `castBarCaption`, `VerifiedBuild`) VALUES
+(@GO_TEMPLATE + 0, 'esES', 'Portal a Ventormenta', '', 0),
+(@GO_TEMPLATE + 1, 'esES', 'Portal a Darnassus', '', 0),
+(@GO_TEMPLATE + 2, 'esES', 'Portal a Exodar', '', 0),
+(@GO_TEMPLATE + 3, 'esES', 'Portal a Forjaz', '', 0),
+(@GO_TEMPLATE + 4, 'esES', 'Portal a Orgrimmar', '', 0),
+(@GO_TEMPLATE + 5, 'esES', 'Portal a Lunargenta', '', 0),
+(@GO_TEMPLATE + 6, 'esES', 'Portal Cima del Trueno', '', 0),
+(@GO_TEMPLATE + 7, 'esES', 'Portal a Entrañas', '', 0),
+(@GO_TEMPLATE + 0, 'esMX', 'Portal a Ventormenta', '', 0),
+(@GO_TEMPLATE + 1, 'esMX', 'Portal a Darnassus', '', 0),
+(@GO_TEMPLATE + 2, 'esMX', 'Portal a Exodar', '', 0),
+(@GO_TEMPLATE + 3, 'esMX', 'Portal a Forjaz', '', 0),
+(@GO_TEMPLATE + 4, 'esMX', 'Portal a Orgrimmar', '', 0),
+(@GO_TEMPLATE + 5, 'esMX', 'Portal a Lunargenta', '', 0),
+(@GO_TEMPLATE + 6, 'esMX', 'Portal Cima del Trueno', '', 0),
+(@GO_TEMPLATE + 7, 'esMX', 'Portal a Entrañas', '', 0);
+
 DELETE FROM `gameobject_template_addon` WHERE `entry` IN (
     @GO_TEMPLATE + 0,
     @GO_TEMPLATE + 1,
