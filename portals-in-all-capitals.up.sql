@@ -22,6 +22,57 @@ INSERT INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `IconNa
 (@GO_TEMPLATE + 6, 22, 4397, 'Portal to Thunder Bluff', '', '', '', 1, 17610, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', '', 0),
 (@GO_TEMPLATE + 7, 22, 4398, 'Portal to Undercity', '', '', '', 1, 17611, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', '', 0);
 
+DELETE FROM `gameobject_template_locale` WHERE `entry` BETWEEN @GO_TEMPLATE + 0 AND @GO_TEMPLATE + 7;
+
+INSERT INTO `gameobject_template_locale` (`entry`, `locale`, `name`, `castBarCaption`, `VerifiedBuild`)
+SELECT @GO_TEMPLATE + 0, L.locale, L.name, '', 0
+FROM gameobject_template AS T
+INNER JOIN gameobject_template_locale AS L
+ON T.entry = L.entry
+WHERE T.entry = 176296  #Portal to Stormwind
+UNION
+SELECT @GO_TEMPLATE + 1, L.locale, L.name, '', 0
+FROM gameobject_template AS T
+INNER JOIN gameobject_template_locale AS L
+ON T.entry = L.entry
+WHERE T.entry = 176498  #Portal to Darnassus
+UNION
+SELECT @GO_TEMPLATE + 2, L.locale, L.name, '', 0
+FROM gameobject_template AS T
+INNER JOIN gameobject_template_locale AS L
+ON T.entry = L.entry
+WHERE T.entry = 182351  #Portal to Exodar
+UNION
+SELECT @GO_TEMPLATE + 3, L.locale, L.name, '', 0
+FROM gameobject_template AS T
+INNER JOIN gameobject_template_locale AS L
+ON T.entry = L.entry
+WHERE T.entry = 176497  #Portal to Ironforge
+UNION
+SELECT @GO_TEMPLATE + 4, L.locale, L.name, '', 0
+FROM gameobject_template AS T
+INNER JOIN gameobject_template_locale AS L
+ON T.entry = L.entry
+WHERE T.entry = 176499  #Portal to Orgrimmar
+UNION
+SELECT @GO_TEMPLATE + 5, L.locale, L.name, '', 0
+FROM gameobject_template AS T
+INNER JOIN gameobject_template_locale AS L
+ON T.entry = L.entry
+WHERE T.entry = 182352  #Portal to Silvermoon
+UNION
+SELECT @GO_TEMPLATE + 6, L.locale, L.name, '', 0
+FROM gameobject_template AS T
+INNER JOIN gameobject_template_locale AS L
+ON T.entry = L.entry
+WHERE T.entry = 176500  #Portal to Thunder Bluff
+UNION
+SELECT @GO_TEMPLATE + 7, L.locale, L.name, '', 0
+FROM gameobject_template AS T
+INNER JOIN gameobject_template_locale AS L
+ON T.entry = L.entry
+WHERE T.entry = 176501; #Portal to Undercity
+
 DELETE FROM `gameobject_template_addon` WHERE `entry` IN (
     @GO_TEMPLATE + 0,
     @GO_TEMPLATE + 1,
