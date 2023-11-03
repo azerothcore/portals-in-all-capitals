@@ -33,3 +33,5 @@ DELETE FROM `gameobject` WHERE `id` IN (
     @GO_TEMPLATE + 6,
     @GO_TEMPLATE + 7
 );
+
+DELETE FROM `gameobject_template_locale` WHERE `entry` BETWEEN @GO_TEMPLATE + 0 AND @GO_TEMPLATE + 7;
